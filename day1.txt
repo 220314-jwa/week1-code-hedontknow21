@@ -1,13 +1,17 @@
-int score = 80;
+int score = 80; //delcaring an variable and giving it a value.
 
-String result;
+String result; // declaring the string results.
 
-if (score == 80) {
-	result = "You passed!";
-} else if (score > 80) {
-	result = "You did great!";
-} else {
-	result = "You did not pass. Try again!";
+if (score == 80) {	//this is a if conditional statement that is asking if the score is equal to 80.
+	result = "You passed!"; // the variable results will output a string of you passed.
+} else if (score > 80) { // this an else if conditonal statement that is asking if score is above 80 yo did great.
+	result = "You did great!"; // result string prints out You passed.
+} else { // else conditional statment asking if its not the first 2 conditions print out the results string.
+	result = "You did not pass. Try again!"; // results string will print out You did not pass. Try again
 }
 
-System.out.println(result);
+System.out.println(result); // This is a command to print to the system a line with the string results.
+
+This code starts off with declaring 2 variables on as just a string and the other an int with a declared value. The 3 conditional statements that run the program are asking 3 questions.
+The if statement contains the other two conditions which ask these questions. The if is asking if your score is equal to 80 then it will print out :you have passed. The else if is asking if you have above an 80 than it will skip the if condition and print out :you did great.
+The else statement will only run if the first two are not true which in turn would mean that the string results was below 80 and the system will print out :you did not pass, try again.
