@@ -11,3 +11,7 @@ if (score == 80) {	//this is a if conditional statement that is asking if the sc
 }
 
 System.out.println(result); // This is a command to print to the system a line with the string results.
+
+This code starts off with declaring 2 variables on as just a string and the other an int with a declared value. The 3 conditional statements that run the program are asking 3 questions.
+The if statement contains the other two conditions which ask these questions. The if is asking if your score is equal to 80 then it will print out :you have passed. The else if is asking if you have above an 80 than it will skip the if condition and print out :you did great.
+The else statement will only run if the first two are not true which in turn would mean that the string results was below 80 and the system will print out :you did not pass, try again.
