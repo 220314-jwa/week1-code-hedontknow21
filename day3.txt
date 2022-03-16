@@ -1,24 +1,29 @@
-public class Food {
-	public String name;
-	public String type;
+public class Food { // start of class Food
+	public String name; // method of the class food - name
+	public String type; // method of class food - type
 
-	public Food(String name, String type) {
-		this.name = name;
-		this.type = type;
+	public Food(String name, String type) { //  creation of method(Food) with paremeters
+		this.name = name; // using this keyword create and declare the variable name
+		this.type = type; // using this keyword create and declare the variable type
 	}
 
-	public void cook() {
-		if (!name.contains("cooked")) {
-			name = "cooked " + name;
+	public void cook() { // creation of method cookwith no return type
+		if (!name.contains("cooked")) { // if loop asking if the name (food) does not contain the name cooked 
+			name = "cooked " + name; // then name = "cooked" pluse name(food)
 		}
 	}
 }
 
-public class Main {
-	public static void main(String[] args) {
-		Food myFood = new Food("potato", "vegetable");
-		myFood.cook();
+public class Main { // start of main program
+	public static void main(String[] args) { // main class for source code
+		Food myFood = new Food("potato", "vegetable"); // Instaniated the class of Food and gave it values
+		myFood.cook(); // Using the myFood class  with the cook class 
 
-		System.out.println(myFood.name);
+		System.out.println(myFood.name); // system will print out "cooked potato, vegatable"
 	}
 }
+This program is starting off by creating the food class. Then it sets its mehtods up with name and type which are both strings.
+Then it creates a method with 2 parameters of name and type, and creates variables using this keyword so it can choose the specific name and type of food.
+The class ends with a void cook class that has an if loop asking if the name contains cooked if not add it to the beggining of the name.
+Lastly in the mainthe class is instaniated and declared with values. A variable for the class is created with cook method.
+The sysytem prints out "cooked potato, vegatable.
