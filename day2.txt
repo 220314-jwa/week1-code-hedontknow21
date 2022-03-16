@@ -22,7 +22,7 @@ public static String[] getFoodsByType(String type) { // creation of the array cl
 		foods[0] = "pancakes"; // first object in the array
 		foods[1] = "cereal";   // second object in the array 
 		foods[2] = "omelette"; // third object in the array
-		break; // a break is used in between cases in a switch loop so the program has a time to stop before each cases is complied
+		break; // a break is used in between cases in a switch loop so you can control the flow of the program
 	case "lunch": // case for lunch and what in its array
 		foods[0] = "sandwich";
 		foods[1] = "salad"; // - the selcections for lunch and their array number
@@ -43,8 +43,8 @@ public static String[] getFoodsByType(String type) { // creation of the array cl
 		foods[1] = "apple"; // - selections for snakcs and their array number
 		foods[2] = "samosa";
 		break; // another break in between cases
-	default: // default can give you a forced or inputted value from any of the cases
-		// foods[0] = "snadwhich"
+	default: // default is a general response if any of the cases are not valid
+		System.out.println("Im not hungry right now");
 		break; // last break in the switch loop before you return a value
 	}
 
