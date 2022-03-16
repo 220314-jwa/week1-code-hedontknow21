@@ -1,52 +1,57 @@
-public static void main(String[] args) {
-	String[] foodTypes = getFoodTypes();
-	String myType = foodTypes[2];
+public static void main(String[] args) { // starting of main program where code begins
+	String[] foodTypes = getFoodTypes(); //creating an instance of the class getFoodTypes
+	String myType = foodTypes[2]; // creating a variable of the class and selecting an value from the array
 
-	String[] foodsOfMyType = getFoodsByType(myType);
+	String[] foodsOfMyType = getFoodsByType(myType); // creating an instance of the class getFoodsByType and giving it the value of the variable from another class
 	
-	for (String food : foodsOfMyType) {
-		System.out.println(food);
+	for (String food : foodsOfMyType) { // for loop that takes the value of a the variable foodsOfMyType
+		System.out.println(food); // system prints out the giving value from the array
 	}
 }
 
-public static String[] getFoodTypes() {
-	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
-	return foodTypes;
+public static String[] getFoodTypes() { // creation of class getFoodTypes
+	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"}; // creation of array foodTypes
+	return foodTypes; // return the foodTypes back to the main
 }
 
-public static String[] getFoodsByType(String type) {
-	String[] foods = new String[3];
+public static String[] getFoodsByType(String type) { // creation of the array class getFoodByType
+	String[] foods = new String[3]; // creation of the array foods and giving it an array sixe of 3
 
-	switch(type) {
-	case "breakfast":
-		foods[0] = "pancakes";
-		foods[1] = "cereal";
-		foods[2] = "omelette";
-		break;
-	case "lunch":
+	switch(type) { // beggining of a switch loop with different cases
+	case "breakfast": // case for breakfast and whats in its array
+		foods[0] = "pancakes"; // first object in the array
+		foods[1] = "cereal";   // second object in the array 
+		foods[2] = "omelette"; // third object in the array
+		break; // a break is used in between cases in a switch loop so the program has a time to stop before each cases is complied
+	case "lunch": // case for lunch and what in its array
 		foods[0] = "sandwich";
-		foods[1] = "salad";
+		foods[1] = "salad"; // - the selcections for lunch and their array number
 		foods[2] = "soup";
-		break;
-	case "dinner":
+		break; // another break used in between cases
+	case "dinner": // case for dinner and whats in its array
 		foods[0] = "curry";
-		foods[1] = "stir fry";
+		foods[1] = "stir fry"; // - the selections for dinner and their array number
 		foods[2] = "burger";
-		break;
-	case "dessert":
+		break; // another break in between cases
+	case "dessert": // case for dessert and whats in its array
 		foods[0] = "cake";
-		foods[1] = "ice cream";
+		foods[1] = "ice cream"; // - selections for dessert and their array number
 		foods[2] = "candy";
-		break;
-	case "snack":
+		break; // another break in bewtween cases
+	case "snack": // case for snacks and whats in its array
 		foods[0] = "chips";
-		foods[1] = "apple";
+		foods[1] = "apple"; // - selections for snakcs and their array number
 		foods[2] = "samosa";
-		break;
-	default:
-		// add your own
-		break;
+		break; // another break in between cases
+	default: // default can give you a forced or inputted value from any of the cases
+		// foods[0] = "snadwhich"
+		break; // last break in the switch loop before you return a value
 	}
 
-	return foods;
+	return foods; // return the value of the foods in the switch conditional statement
+
+This program creates 2 classes getFoodTypes and getFoodsByType. One is an array for the name or time frame of foods and when they should be eaten.
+The other gives the specific type of food depending on the category name it falls under. Program starts of with creating an instance of the getFoodTypes and the creating a variable of the array class and giving it a value.
+Then it creates an instance of getFoodsByType and declares the variable of foodsOfMyType with vaule of the other variable myType.
+It then creates a for loop for the variable array string foodsOfMyType to be printed out depending on the input. The system prints out "burger".
 }
