@@ -1,12 +1,15 @@
-public class Main {
-	public static void main(String[] args) {
-		Javalin app = Javalin.create();
+public class Main { // Main class where your code will run
+	public static void main(String[] args) { // basic starting point of a code with the main source code
+		Javalin app = Javalin.create(); // creating an instance of the Javalin app and also creating it at the same time
 
-		app.start();
+		app.start(); // Starts the app
 
-		app.get("foods", ctx -> {
-			Food myFood = new Food("carrots", "vegetable");
-			ctx.result("You got: " + myFood.name);
+		app.get("foods", ctx -> { // using the get word to search for foods, ctx is the context
+			Food myFood = new Food("carrots", "vegetable"); // Food class is instantiated and given a value of carrots and vegetable
+			ctx.result("You got: " + myFood.name); // context result that will print out on the local host
 		});
 	}
 }
+
+This Javalin app is going to instantiated and created at the same time. The app is started. Then it is getting the access to foods and the context of it.
+Then class food is instantiated and created with given vaules of carrot and vegetable. The last line prints out the results that will read : You got carrots.
