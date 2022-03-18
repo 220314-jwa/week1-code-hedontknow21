@@ -1,25 +1,34 @@
-<html>
-	<head>
-		<title>Daily Code Review</title>
-	</head>
-	<body>
-		<h1>Cook your food!</h1>
-		<form action="http://localhost:8080/cook">
-			<label for="foodName">Food Name:</label>
-			<input id="foodName" name="foodName" type="text">
-			<br>
-			<button type="submit">Submit</button>
-		</form>
-	</body>
-</html>
+<html> // root tag where all tags fall under
+	<head> // tag that includes titles etc..
+		<title>Daily Code Review</title> // title tag with the name of the title being Daily Code Review
+	</head> //end of head tag or header
+	<body> // tag in which allows the user to see the page
+		<h1>Cook your food!</h1> // a heading tag with the ttile being cook your food
+		<form action="http://localhost:8080/cook"> // begginning of the form which is using the action attribute to set the URI to local host 8080/cook
+			<label for="foodName">Food Name:</label> // label tag with the title Food Name
+			<input id="foodName" name="foodName" type="text"> // input label with an id for foodName, an actual name for foodName and the type of input would be text
+			<br> // break in the line or new line
+			<button type="submit">Submit</button> // the button and type of buuton is a submit button
+		</form> // the ending of the form with button being the last action for the user
+	</body> // end of the page in which the user can see
+</html> // closing of the html
 
-public static void main(String[] args) {
-	Javalin app = Javalin.create();
-	app.start();
+public static void main(String[] args) { // begginging of a main source for a Javalin app
+	Javalin app = Javalin.create(); // Javalin app instantiated and created
+	app.start(); // app started
 
-	app.get("cook", ctx -> {
-		String foodSent = ctx.formParam("foodName");
-		String cookedFood = "cooked " + foodSent;
-		ctx.result("Here's your food! <br>" + cookedFood);
+	app.get("cook", ctx -> { // the app is getting the context of the HTTP request "cook"
+		String foodSent = ctx.formParam("foodName"); // string created to get the context parameters of foodName
+		String cookedFood = "cooked " + foodSent; // string cookedFood equals "cooked" plus the foodSent variable 
+		ctx.result("Here's your food! <br>" + cookedFood); // the context results that will load once the user hits the submit button
 	});
 }
+
+The page will load with a Cook Your food title. 
+Where the user is going to input a food name and click submit.
+The program will send it to the main in the Javalin app created.
+The app is receiving the request and taking the food name, 
+and adding a string to with the word cooked.
+Then the app will send back to form with the results being
+Heres your food with a new line under it say the title of the food the user input.
+
